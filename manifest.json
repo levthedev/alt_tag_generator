@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "name": "Alt tag generator",
+  "description": "This extension adds alt text to all images on a page without it by using machine learning to categorize images",
+  "version": "0.0.1",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "http://*/",
+    "https://*/"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["background.js"]
+    }
+  ],
+  "background": {
+    "scripts": ["background2.js"],
+    "persistent": false
+  }
+}
