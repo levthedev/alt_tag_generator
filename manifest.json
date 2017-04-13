@@ -17,11 +17,7 @@
   "content_scripts": [
     {
       "matches": ["*://*/*"],
-      "js": ["background.js"]
+      "js": ["jquery.js", "background.js"]
     }
-  ],
-  "background": {
-    "scripts": ["background2.js"],
-    "persistent": false
-  }
+  ]
 }
